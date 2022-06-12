@@ -1,11 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+// func multiply(a, b int) int {
+// 	return a * b
+// }
+
+func lenAndUpper(name string) (int, string){
+	return len(name), strings.ToUpper(name)
+}
 
 func main() {
-	// fmt.Println("When you export it, the fuction should be started with UpperCase!!")
-	// const name string = "Hwee" -> 상수, 변형 불가
-	// var name string = "Hwee" -> 변수, 변형 가능
-	name := "Hwee" //축약형, var name string = "Hwee"와 동일함, 변수만 사용가능하며, 함수 안에서만 사용가능
-	fmt.Println(name)
+	totalLength, upperName := lenAndUpper("Hwee")
+	// totalLength, _ := lenAndUpper("Hwee") 밸류 무시, 4 출력
+	fmt.Println(totalLength, upperName)
 }
